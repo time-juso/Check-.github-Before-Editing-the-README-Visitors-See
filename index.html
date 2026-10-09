@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check GitHub README location precedence before editing a repository introduction.">
+  <title>Check .github Before Editing the README Visitors See</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%225%22%20fill%3D%22%23945947%22%2F%3E%3Cpath%20d%3D%22M8%208h16M8%2016h12M8%2024h16%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%2F%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><main class="article-shell"><article><h1>Check .github Before Editing the README Visitors See</h1>
+<p>If you update a repository's root README but its introduction on GitHub still looks unchanged, check whether another README takes priority. GitHub chooses the automatically displayed repository README from the <code>.github</code> directory first, the root directory next, and the <code>docs</code> directory last. An edit can be saved correctly while affecting a file other than the one visitors are reading.</p>
+<p>Imagine a fictional volunteer group maintaining a collection of community workshop resources. Ellis updates the opening paragraph in the root <code>README.md</code>, checks the changed file, and asks a colleague to review the repository landing page. The colleague still sees the old welcome message. Before blaming a failed save, Ellis needs to establish which document supplies that visible introduction.</p>
+<figure><img src="assets/staggered-panels.jpg" alt="" width="1536" height="1024"></figure>
+<h2>One repository can contain several introductions</h2>
+<p>The word README describes a role, but a file also has a location. <code>README.md</code>, <code>.github/README.md</code>, and <code>docs/README.md</code> are different paths. Similar names or matching opening sentences do not make them the same file.</p>
+<p>In Ellis's example, the root document contains a short project overview, while a second version lives in <code>.github</code>. Both once began with the same sentence. That duplication made it easy to assume that editing either visible copy would change the repository's main introduction.</p>
+<p>Start by writing down the path you actually edited. Then compare it with the source of the introduction you are reviewing. This is a smaller and more useful question than “Why is GitHub showing old content?” It identifies the two objects that might have been confused.</p>
+<p>Do not assume that the newest-looking file wins. The documented location order is not a contest between modification dates. A recent correction in one file can coexist with an older sentence in the file selected for display. Treat recency and display selection as separate facts during the investigation.</p>
+<h2>Trace the displayed text before making another edit</h2>
+<p>Choose one distinctive sentence from the introduction on the repository page. Avoid a generic heading such as “Getting started,” which may appear in several places. A sentence mentioning the group's purpose or contribution process is easier to compare reliably.</p>
+<p>Look for that sentence in the candidate README files on the same branch you are reviewing. Record the full path beside each match. If several files contain identical text, the text match alone does not settle the question; combine it with the documented precedence order.</p>
+<p>For Ellis, the old welcome sentence appears in <code>.github/README.md</code>, while the new wording appears in the root file. That explains the apparent contradiction. The correction exists, but the repository introduction is being drawn from a different location.</p>
+<p>Keep this check observational at first. There is no need to delete a README, rename a directory, or change the default branch merely to identify the displayed source. Those actions affect the project structure and deserve their own review if a maintainer later decides they are appropriate.</p>
+<p>Also separate a direct file view from the repository landing view. Opening a particular README proves what that file currently contains. It does not, by itself, prove that the same file supplies the introduction shown elsewhere in the repository interface.</p>
+<h2>Choose the smallest correction that matches the task</h2>
+<p>Once the source is identified, ask what needs to change. If the task is to correct a welcome sentence, the smallest useful change may be an edit to the README currently selected for display. Follow the project's contribution process rather than reorganizing its documentation as a side effect.</p>
+<p>If the project intentionally keeps multiple introductions, find out what each one is for. One may support a particular folder or workflow. An older-looking copy is not automatically disposable, and a contributor should not infer permission to remove it from a request to fix a paragraph.</p>
+<p>Where duplication is accidental, propose a separate cleanup with a clear explanation. State which document should be maintained and how readers should reach any remaining material. Keeping that proposal separate lets reviewers approve the immediate correction without accepting a larger structural decision.</p>
+<p>Moving a README also changes its location relative to nearby files. Review images and local references if a move is authorized; copying the prose alone is not a complete migration check. A tidy introduction that loses its illustration or supporting route creates a new problem while solving the original one.</p>
+<h2>Keep new resource research outside the display diagnosis</h2>
+<p>A repository introduction may explain how a collection is assembled, but its display source and its resource choices are separate concerns. Do not add a batch of new recommendations while you are still trying to establish which README visitors see. That makes the review harder to interpret.</p>
+<p>For a later discovery task, <a href="https://xn--o39ap22bba372d6zbda.com/" rel="noopener noreferrer">주소가자 사이트모음</a> can be considered as one reference point to inspect before selecting candidate sites. Its inclusion does not verify any repository's contents or establish the quality, availability, or suitability of the destinations you may encounter. Confirm each final source against the collection's own criteria.</p>
+<p>Ellis therefore keeps the welcome-text correction in one proposed change and records possible new resources separately. The reviewer can first answer whether the visible introduction is accurate. A later review can decide whether a candidate belongs in the collection at all.</p>
+<p>This separation also makes the completion note clearer. “Corrected the repository introduction” describes a presentation-source repair. “Reviewed these new resources” describes a content decision. Neither statement should be used as shorthand for the other, even when both tasks involve the same repository.</p>
+<h2>Verify the result on the route readers use</h2>
+<p>A useful verification follows the same route that exposed the problem. Looking only at the edited file repeats the original blind spot. After the approved change reaches the intended branch, revisit the repository view and compare the actual introduction.</p>
+<ol>
+<li>Record the repository, branch, and README path involved in the proposed correction.</li>
+<li>Confirm which candidate location supplies the introduction before editing, using both the file contents and the precedence rule.</li>
+<li>Review the proposed diff for the intended wording change and any unintended file moves or deletions.</li>
+<li>After the approved change is present on the branch being reviewed, return to the repository introduction and read the updated sentence there.</li>
+<li>Check any image or local reference touched by the change, then write a completion note that names the verified path and view.</li>
+</ol>
+<p>If the introduction still differs, compare the branch context before repeating the edit. A change under review is not the same as a change already present in the version you are reading. Keep the discrepancy specific enough that another contributor can reproduce it.</p>
+<p>For a public repository, a logged-out check can help confirm the intended visitor route. Do not change a private repository's visibility just to obtain that result. Use an appropriate authorized reader instead, and distinguish public accessibility from correctness of the displayed text.</p>
+<h2>Questions to settle before removing a duplicate</h2>
+<h3>Does editing the root README always change the landing introduction?</h3>
+<p>No. First check whether a README in <code>.github</code> has priority. The root file can be correct and still not be the document selected for that view. Confirm the actual source before making the same correction again.</p>
+<h3>Should I delete the higher-priority file to reveal the root version?</h3>
+<p>Not automatically. That is a structural change, and the higher-priority document may exist for a reason. Ask the maintainer which introduction should be authoritative, review the consequences, and keep an ordinary wording correction separate from a proposed reorganization.</p>
+<h3>Does this rule describe every page published from the repository?</h3>
+<p>No. This guide concerns GitHub's repository README display, not a separately built website or every nested folder view. A generated documentation site has its own source and publishing workflow. Verify the surface you are actually trying to change.</p>
+<p>The practical habit is to name the file behind the page before fixing the page. Establish the README path, make the smallest authorized correction, and verify the result where readers encounter it. A successful file edit becomes a successful introduction update only when those two views agree.</p></article></main></body>
+</html>
